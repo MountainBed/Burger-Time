@@ -32,19 +32,19 @@ var orm = {
       cb(result);
     });
   },
-  insertOne: function (tableName, colName, colValue, cb) {
+  insertOne: function (tableName, colName, rowValue, cb) {
     var queryString = "INSERT INTO " + tableName;
 
     queryString += " (";
     queryString += colName.toString();
     queryString += ") ";
     queryString += "VALUES (";
-    queryString += printQuestionMarks(colValue.length);
+    queryString += printQuestionMarks(rowValue.length);
     queryString += ") ";
 
     console.log(queryString);
 
-    connection.query(queryString, colValue, function (err, result) {
+    connection.query(queryString, rowValue, function (err, result) {
       if (err) {
         throw err;
       }
