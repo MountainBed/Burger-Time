@@ -34,7 +34,7 @@ var orm = {
   },
   insertOne: function (tableName, colName, rowValue, cb) {
     var queryString = "INSERT INTO " + tableName;
-
+    console.log(rowValue);
     queryString += " (";
     queryString += colName.toString();
     queryString += ") ";
@@ -59,7 +59,6 @@ var orm = {
     queryString += " WHERE ";
     queryString += condition;
 
-    console.log(queryString);
     connection.query(queryString, function (err, result) {
       if (err) {
         throw err;

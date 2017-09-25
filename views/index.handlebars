@@ -7,10 +7,8 @@
         {{#each burger}}
         {{#unless this.devoured}}
         <div>
-          <form>
             {{this.id}}.  {{this.burger_name}}
-            <button type="submit" class="btn waves-effect waves-light red burgerAvailable" value={{this.id}} id="burger-{{this.id}}">Eat It!</button>
-          </form>
+            <button type="submit" class="btn waves-effect waves-light red burgerAvailable" value={{this.id}}>Eat It!</button>
         </div>
         <br>
         {{/unless}}

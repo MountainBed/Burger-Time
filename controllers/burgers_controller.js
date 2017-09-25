@@ -12,7 +12,11 @@ router.get("/", function (req, res) {
 });
 
 router.post("/", function (req, res) {
-  burger.create("burger_name", req.body.name, function () {
+  burger.create([
+    "burger_name"
+  ], [
+    req.body.burger_name
+  ], function () {
     res.redirect("/");
   });
 });
@@ -21,7 +25,7 @@ router.put("/:id", function (req, res) {
   var condition = "id = " + req.params.id;
 
   burger.update({
-    devoured: req.body.devoured
+    devoured: true
   }, condition, function () {
     res.redirect("/");
   });
