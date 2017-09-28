@@ -5,6 +5,7 @@ function updateDevoured () {
     method: "PUT",
     url: "/" + currentId,
     success: function (res) {
+      window.location = location.pathname;
     }
   });
 };
