@@ -11,4 +11,4 @@ Link to the app, deployed on Heroku: [Burger Time]
 ### Copyright
   &copy; 2017 Ross Blair
 
-[Burger Time]: <https://google.com>
+[Burger Time]: <https://safe-badlands-30942.herokuapp.com/>
